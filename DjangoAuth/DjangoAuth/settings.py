@@ -24,8 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = "smtp.gmail.com"
-EMAIL_HOST_USER = "temp.use2.12.31.1999@gmail.com"
-EMAIL_HOST_PASSWORD = "jbrp uadx zkdk mzlb"
+EMAIL_HOST_USER = "xxxxxxxx"
+EMAIL_HOST_PASSWORD = "xxxxxxxxx"
 EMAIL_PORT = 587
 
 # Quick-start development settings - unsuitable for production
