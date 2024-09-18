@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home Page{% endblock title %}</title>
+</head>
+<body>
+
+    {% block messages %}{% endblock messages %}
+
+    {% block main %}
+
+        <h3>Welcome to the site</h3>    
+
+        {% if user.is_authenticated %}
+        <h3>Hello {{username}}! </h3>
+        <h4>You are successfully logged in! </h4>
+        <button><a href="/signout">SignOut</a></button>
+
+
+        {% else %}
+         <button><a href="/signin">SignIn</a></button>
+        <button><a href="/signup">SignUp</a></button>
+        {% endif %}
+
+
+    {% endblock main %}
+
+    {% comment %} {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %} {% endcomment %}
+
+
+
+
+</body>
+</html>
